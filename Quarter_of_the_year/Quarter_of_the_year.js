@@ -8,4 +8,4 @@ const quarterOf = (month) => {
     } else {
       return 4
     }
-  }
+}
