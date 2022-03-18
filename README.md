@@ -1,2 +1,2 @@
 # Code-Wars
-Daily Javascript Code Wars Challenges
+My solutions to Daily Javascript Code Wars Challenges
