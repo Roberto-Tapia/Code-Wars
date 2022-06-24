@@ -8,3 +8,4 @@ function sumMix(x){
     let array = x.map(num => Number(num))
     return array.reduce((init, curr) => init + curr, 0)
   }
+  
