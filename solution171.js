@@ -4,20 +4,20 @@
 
 // Write a function to calculate factorial for a given input. If input is below 0 or above 12 throw an exception of type ArgumentOutOfRangeException (C#) or IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError (JavaScript) or ValueError (Python) or return -1 (C).
 
-// More details about factorial can be found here.
 
 
 function factorial(n)
 {
-  let count = 1
+  let counting = 1
   
   if (n < 0 || n > 12) {
     throw new RangeError('It is broken')
   }
   
   for (let i = n; i > 0; i--){
-    count = count * i
+    counting = counting * i
   }
   
-  return count
+  return counting
+
 }
