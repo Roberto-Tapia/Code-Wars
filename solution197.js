@@ -4,51 +4,47 @@
 
 
 function isPangram(string){
-    let object = {
-      "a": false,
-      "b": false,
-      "c": false,
-      "d": false,
-      "e": false,
-      "f": false,
-      "g": false,
-      "h": false,
-      "i": false,
-      "j": false,
-      "k": false,
-      "l": false,
-      "m": false,
-      "n": false,
-      "o": false,
-      "p": false,
-      "q": false,
-      "r": false,
-      "s": false,
-      "t": false,
-      "u": false,
-      "v": false,
-      "w": false,
-      "x": false,
-      "y": false,
-      "z": false
-    }
-    
-    let array = [...string].map(x => x.toLowerCase()).filter(letter => /[a-zA-Z]/.test(letter))
-    console.log(array)
-    
-    for (let i = 0; i < array.length; i++){
-      if(object.hasOwnProperty(array[i])) {
-        object[array[i]] = true
-    }
-      }
-    
-    let length = Object.keys(object).length
-    
-    for (let i = 0; i < length; i++){
-      //go through each letter of the object and return false if letter value is not true
-      if (!object[array[i]]){
-        return false
-      }
-    }
-    return true
+  let object = {
+    "a": false,
+    "b": false,
+    "c": false,
+    "d": false,
+    "e": false,
+    "f": false,
+    "g": false,
+    "h": false,
+    "i": false,
+    "j": false,
+    "k": false,
+    "l": false,
+    "m": false,
+    "n": false,
+    "o": false,
+    "p": false,
+    "q": false,
+    "r": false,
+    "s": false,
+    "t": false,
+    "u": false,
+    "v": false,
+    "w": false,
+    "x": false,
+    "y": false,
+    "z": false
   }
+  
+  let array = [...string].map(x => x.toLowerCase()).filter(letter => /[a-zA-Z]/.test(letter))
+  
+  for (let i = 0; i < array.length; i++){
+    if(object.hasOwnProperty(array[i])) {
+      object[array[i]] = true
+  }
+    }
+  
+  for (let key in object){
+    if(object[key] == false) {
+      return false
+    }
+  }
+  return true
+}
